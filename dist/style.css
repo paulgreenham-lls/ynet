@@ -35,10 +35,14 @@ body {
 
 .main-date {
     grid-area: md;
+    color: gray;
+    font-size: 36px;
 }
 
 .main-header {
     grid-area: mh;
+    font-weight: bold;
+    font-size: 48px;
 }
 
 .main-summary {
