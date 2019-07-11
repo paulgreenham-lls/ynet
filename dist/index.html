@@ -11,10 +11,32 @@
     <div id="header"><img src="https://images1.ynet.co.il/PicServer5/2019/06/04/9287924/928790309916100640360no.jpghttps://www.ynetnews.com/images/CENTRAL_1024_ynet_logo_en.png" alt=""></div>
     <div id="main">
         <div id="news-ticker">scrolling list</div>
-        <div id="main-article">main article</div>
+        <div id="main-article">
+            <div class="main-date"></div>
+            <div class="main-header"></div>
+            <div class="main-summary"></div>
+            <div class="main-image"></div>
+        </div>
         <div id="subarticles"></div>
     </div>
+
+    <script id="subarticle-template" type="text/x-handlebars-template">
+        <div class="subarticle">
+            <div class="sub-header">{{headline}}</div>
+            <div class="sub-summary">{{summary}}</div>
+            <div class="sub-image"><img src="{{image}}" alt=""></div>
+        </div>
+    </script>
+
+    <script id="tickerarticle-template" type="text/x-handlebars-template">
+        <div class="tickerarticle">
+            <div class="ticker-header">{{headline}}</div>
+            <div class="ticker-date">{{date}}</div>
+        </div>
+    </script>
+
     <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
     <script src="renderer.js"></script>
     <script src="main.js"></script>
 </body>
