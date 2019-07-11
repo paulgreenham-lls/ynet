@@ -9,18 +9,19 @@ class Renderer {
 
     renderTicker(newsList) {
         $("#news-ticker").empty()
-        this._renderArticles(newsList, "#news-ticker", "#team-container")
+        this._renderArticles(newsList, "#tickerarticle-template", "#news-ticker")
     }
 
     renderSubArticles(newsList) {
         $("#subarticles").empty()
-        this._renderArticles(newsList, "#subarticles", "#team-container")
+        this._renderArticles(newsList, "#subarticle-template", "#subarticles")
     }
 
     renderMainArticle(article) {
-        $(".main-date").val(article.date)
-        $(".main-header").val(article.headline)
-        $(".main-summary").val(article.summary)
-        $(".main-image").attr("src", article.date)
+        console.log(article)
+        $(".main-date").text(article.date)
+        $(".main-header").text(article.headline)
+        $(".main-summary").text(article.summary)
+        $(".main-image").attr("src", article.image)
     }
 }
